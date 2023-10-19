@@ -3,7 +3,4 @@ if SHIELD_ERGOTRAVEL_R
 config ZMK_KEYBOARD_NAME
     default "Ergotravel R"
 
-0config ZMK_SPLIT
-    default y
-
 endif
