@@ -28,8 +28,8 @@
         default_layer {
             bindings = <
 &mt GRAVE ESC  &mt NUMBER_1 Q  &mt NUMBER_2 W  &mt NUMBER_3 E  &mt NUMBER_4 R  &mt N5 T  &kp INS     &kp PG_UP  &mt NUMBER_6 Y  &mt N7 U  &mt N8 I  &mt N9 O   &mt N0 P   &kp BACKSPACE
-&kp TAB        &kp A           &kp S           &kp D           &kp F           &kp G     &kp DEL     &kp PG_DN  &kp H           &kp J     &kp K     &kp L      &kp SEMI   &kp SQT
-&kp LSHFT      &kp SLASH       &kp Z           &kp X           &kp C           &kp V     &kp K_MUTE             &kp B           &kp N     &kp M     &kp COMMA  &kp DOT    &kp RSHFT
+&kp TAB        &kp A           &kp S           &kp D           &kp F           &kp G     &kp DEL     &kp PG_DN  &kp H           &kp J     &kp K     &kp L      &kp SEMI   &kp MINUS
+&kp LSHFT      &kp SLASH       &kp Z           &kp X           &kp C           &kp V     &kp K_MUTE             &kp B           &kp N     &kp M     &kp COMMA  &kp DOT    &kp SQT
 &kp LCTRL      &none           &kp LGUI        &kp LALT                        &mo 1     &kp SPACE   &kp SPACE  &mo 2                     &kp LALT  &kp LEFT   &kp RIGHT  &kp LGUI
             >;
         };
@@ -37,27 +37,27 @@
         left_layer {
             bindings = <
 &trans  &none  &kp F1  &kp F2   &kp F3   &kp F4   &kp PRINTSCREEN  &none      &kp KP_PLUS   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MULTIPLY  &kp BACKSPACE
-&trans  &none  &kp F5  &kp F6   &kp F7   &kp F8   &kp K_MENU       &none      &kp KP_MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DIVIDE    &kp SQT
-&trans  &none  &kp F9  &kp F10  &kp F11  &kp F12  &none                       &none         &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT       &kp RSHFT
-&trans  &none  &none   &trans            &trans   &kp SPACE        &kp ENTER  &trans                         &kp KP_NUMBER_0  &kp UP           &kp DOWN         &kp RIGHT
+&trans  &none  &kp F5  &kp F6   &kp F7   &kp F8   &kp K_MENU       &none      &kp KP_MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DIVIDE    &kp EQUAL
+&trans  &none  &kp F9  &kp F10  &kp F11  &kp F12  &none                       &none         &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT       &none
+&trans  &none  &none   &trans            &trans   &kp ENTER        &kp ENTER  &trans                         &kp KP_NUMBER_0  &none            &none            &none
             >;
         };
 
         right_layer {
             bindings = <
 &trans  &none  &none  &none   &none  &none   &kp K_MUTE  &kt C_VOLUME_UP  &kp PG_UP      &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &mt DEL LEFT_BRACKET  &mt BACKSPACE RIGHT_BRACKET
-&trans  &none  &none  &none   &none  &none   &none       &kp C_VOL_DN     &kp PG_DN      &kp LEFT      &kp DOWN  &kp RIGHT      &none                 &none
+&trans  &none  &none  &none   &none  &none   &none       &kp C_VOL_DN     &kp PG_DN      &kp LEFT      &kp DOWN  &kp RIGHT      &kp COLON             &kp EQUAL
 &trans  &none  &none  &none   &none  &none   &none                        &kp LG(SPACE)  &kp HOME      &none     &kp END        &none                 &none
-&trans  &none  &none  &trans         &trans  &none       &none            &trans                       &none     &none          &none                 &none
+&trans  &none  &none  &trans         &trans  &kp ENTER   &kp ENTER        &trans                       &none     &none          &none                 &none
             >;
         };
 
         tri_layer {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_NXT  &sys_reset   &none   &none  &none  &none  &none  &none
-&trans      &none         &none         &none         &none         &none         &bt BT_PRV  &bootloader  &none   &none  &none  &none  &none  &none
-&trans      &none         &none         &none         &none         &none         &none                    &none   &none  &none  &none  &none  &none
-&trans      &none         &none         &trans                      &trans        &none       &none        &trans         &none  &none  &none  &none
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_NXT      &sys_reset   &none   &none  &none  &none  &none  &none
+&trans      &none         &none         &none         &none         &none         &bt BT_PRV      &bootloader  &none   &none  &none  &none  &none  &none
+&trans      &none         &none         &none         &none         &none         &kp CLCK                     &none   &none  &none  &none  &none  &none
+&trans      &none         &none         &trans                      &trans        &kp KP_NUMLOCK  &none        &trans         &none  &none  &none  &none
             >;
         };
     };
