@@ -25,32 +25,24 @@
             label = "CC";
             #binding-cells = <0>;
             bindings = <&kp C>, <&kp LC(C)>;
-
-            tapping-term-ms = <50>;
         };
         vpaste: vpaste {
             compatible = "zmk,behavior-tap-dance";
             label = "VPASTE";
             #binding-cells = <0>;
             bindings = <&kp V>, <&kp LC(V)>;
-
-            tapping-term-ms = <50>;
         };
         zundo: zundo {
             compatible = "zmk,behavior-tap-dance";
             label = "ZUNDO";
             #binding-cells = <0>;
             bindings = <&kp Z>, <&kp LC(Z)>;
-
-            tapping-term-ms = <50>;
         };
         xcut: xcut {
             compatible = "zmk,behavior-tap-dance";
             label = "XCUT";
             #binding-cells = <0>;
             bindings = <&kp X>, <&kp LC(X)>;
-
-            tapping-term-ms = <50>;
         };
     };
 
