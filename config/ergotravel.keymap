@@ -97,7 +97,7 @@
         left_layer {
             bindings = <
 &trans  &none  &kp F1  &kp F2   &kp F3   &kp F4   &kp PRINTSCREEN  &none      &kp KP_PLUS   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MULTIPLY  &kp BACKSPACE
-&trans  &none  &kp F5  &kp F6   &kp F7   &kp F8   &kp K_MENU       &none      &kp KP_MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DIVIDE    &kp EQUAL
+&trans  &none  &kp F5  &kp F6   &kp F7   &kp F8   &kp C_MENU       &none      &kp KP_MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DIVIDE    &kp EQUAL
 &trans  &none  &kp F9  &kp F10  &kp F11  &kp F12  &none                       &none         &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT       &kp MINUS
 &trans  &none  &none   &trans            &trans   &kp ENTER        &kp ENTER  &trans                         &kp KP_NUMBER_0  &none            &none            &none
             >;
