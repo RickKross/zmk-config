@@ -25,9 +25,15 @@
     combos {
         compatible = "zmk,combos";
 
+        combo_enter {
+            bindings = <&kp RET>;
+            key-positions = <46 47>;
+            layers = <0>;
+        };
+
         combo_ch_lang {
             bindings = <&kp LG(SPACE)>;
-            key-positions = <46 47>;
+            key-positions = <34 47>;
         };
     };
 
