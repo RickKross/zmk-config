@@ -28,21 +28,37 @@
 
             tapping-term-ms = <50>;
         };
-        ppaste: ppaste {
+        vpaste: vpaste {
             compatible = "zmk,behavior-tap-dance";
-            label = "PPASTE";
+            label = "VPASTE";
             #binding-cells = <0>;
             bindings = <&kp V>, <&kp LC(V)>;
 
             tapping-term-ms = <50>;
         };
-        bback: bback {
+        zundo: zundo {
             compatible = "zmk,behavior-tap-dance";
-            label = "BBACK";
+            label = "ZUNDO";
             #binding-cells = <0>;
             bindings = <&kp Z>, <&kp LC(Z)>;
 
             tapping-term-ms = <50>;
+        };
+        xcut: xcut {
+            compatible = "zmk,behavior-tap-dance";
+            label = "XCUT";
+            #binding-cells = <0>;
+            bindings = <&kp X>, <&kp LC(X)>;
+
+            tapping-term-ms = <50>;
+        };
+        minus_backspace: minus_backspace {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MINUS_BACKSPACE";
+            bindings = <&kp MINUS>, <&kp BACKSPACE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RALT)>;
         };
     };
 
@@ -71,10 +87,10 @@
 
         default_layer {
             bindings = <
-&kp TAB        &kp Q      &kp W     &kp E     &kp R   &kp T    &kp C_VOL_UP  &kp PG_UP  &kp Y  &kp U  &kp I     &kp O      &kp P     &kp MINUS
+&kp TAB        &kp Q      &kp W     &kp E     &kp R   &kp T    &kp C_VOL_UP  &kp PG_UP  &kp Y  &kp U  &kp I     &kp O      &kp P     &minus_backspace
 &kp LCTRL      &kp A      &kp S     &kp D     &kp F   &kp G    &kp C_VOL_DN  &kp PG_DN  &kp H  &kp J  &kp K     &kp L      &kp SEMI  &kp SQT
-&kp LSHFT      &kp SLASH  &bback    &kp X     &ccopy  &ppaste  &none                    &kp B  &kp N  &kp M     &kp COMMA  &kp DOT   &kp BACKSPACE
-&mt GRAVE ESC  &none      &kp LGUI  &kp LALT          &mo 1    &kp SPACE     &kp SPACE  &mo 2         &kp LEFT  &kp RIGHT  &kp LALT  &kp LGUI
+&kp LSHFT      &kp SLASH  &zundo    &xcut     &ccopy  &vpaste  &none                    &kp B  &kp N  &kp M     &kp COMMA  &kp DOT   &kp BACKSPACE
+&mt GRAVE ESC  &none      &kp LGUI  &kp LALT          &mo 1    &kp SPACE     &kp SPACE  &mo 2         &kp LEFT  &kp RIGHT  &kp RALT  &kp LGUI
             >;
         };
 
