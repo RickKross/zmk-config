@@ -16,6 +16,14 @@
 
 / {
     behaviors {
+        backdel: backdel {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BACKDEL";
+            bindings = <&kt BSPC>, <&kt DEL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
     };
 
     combos {
@@ -38,10 +46,10 @@
 
         default_layer {
             bindings = <
-&mt ESC TAB  &kp Q      &kp W     &kp E     &kp R  &kp T  &kp UP         &kp C_VOL_UP  &kp Y  &kp U  &kp I     &kp O      &kp P      &kp BSPC
-&kp LSHFT    &kp A      &kp S     &kp D     &kp F  &kp G  &kp DOWN       &kp C_VOL_DN  &kp H  &kp J  &kp K     &kp L      &kp SEMI   &kp SQT
-&kp LCTRL    &kp SLASH  &kp Z     &kp X     &kp C  &kp V  &kp LG(SPACE)                &kp B  &kp N  &kp M     &kp COMMA  &kp DOT    &kp MINUS
-&kp GRAVE    &none      &kp LGUI  &kp LALT         &mo 1  &kp SPACE      &kp SPACE     &mo 2         &kp RALT  &kp LEFT   &kp RIGHT  &kp LGUI
+&mt ESC TAB  &kp Q        &kp W        &kp E       &kp R       &kp T  &kp UP         &kp C_VOL_UP  &kp Y  &kp U       &kp I       &kp O        &kp P           &backdel
+&kp GRAVE    &mt LSHFT A  &mt LCTRL S  &mt LALT D  &mt LWIN F  &kp G  &kp DOWN       &kp C_VOL_DN  &kp H  &mt LWIN J  &mt LALT K  &mt LCTRL L  &mt LSHFT SEMI  &kp SQT
+&none        &kp SLASH    &kp Z        &kp X       &kp C       &kp V  &kp LG(SPACE)                &kp B  &kp N       &kp M       &kp COMMA    &kp DOT         &kp MINUS
+&none        &none        &none        &none                   &mo 1  &kp SPACE      &kp SPACE     &mo 2              &kp RALT    &kp LEFT     &kp RIGHT       &kp LGUI
             >;
         };
 
@@ -56,10 +64,10 @@
 
         right_layer {
             bindings = <
-&trans    &kp N1  &kp N2     &kp N3     &kp N4     &kp N5     &kp DEL    &kt BACKSPACE  &kp PG_UP      &none     &kp UP    &none      &kp LBKT   &kp RBKT
-&trans    &kp N6  &kp N7     &kp N8     &kp N9     &kp N0     &kp INS    &none          &kp PG_DN      &kp LEFT  &kp DOWN  &kp RIGHT  &kp COLON  &kp EQUAL
-&trans    &none   &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(A)                 &kp LG(SPACE)  &kp HOME  &none     &kp END    &none      &kp MINUS
-&kp LWIN  &none   &none      &trans                &trans     &kp ENTER  &kp ENTER      &trans                   &none     &none      &none      &kp BACKSLASH
+&trans  &kp N1  &kp N2     &kp N3     &kp N4     &kp N5     &kp DEL    &kt BACKSPACE  &kp PG_UP      &none     &kp UP    &none      &kp LBKT   &kp RBKT
+&trans  &kp N6  &kp N7     &kp N8     &kp N9     &kp N0     &kp INS    &none          &kp PG_DN      &kp LEFT  &kp DOWN  &kp RIGHT  &kp COLON  &kp EQUAL
+&trans  &none   &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(A)                 &kp LG(SPACE)  &kp HOME  &none     &kp END    &none      &kp MINUS
+&none   &none   &kp LWIN   &trans                &trans     &kp ENTER  &kp ENTER      &trans                   &none     &none      &none      &kp BACKSLASH
             >;
         };
 
