@@ -29,8 +29,8 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_enter {
-            bindings = <&kp RET>;
+        combo_tab {
+            bindings = <&kp TAB>;
             key-positions = <46 47>;
             layers = <0>;
         };
@@ -46,10 +46,10 @@
 
         default_layer {
             bindings = <
-&mt ESC TAB  &kp Q        &kp W        &kp E       &kp R       &kp T  &kp UP         &kp C_VOL_UP  &kp Y  &kp U       &kp I       &kp O        &kp P           &backdel
-&kp GRAVE    &mt LSHFT A  &mt LCTRL S  &mt LALT D  &mt LWIN F  &kp G  &kp DOWN       &kp C_VOL_DN  &kp H  &mt LWIN J  &mt LALT K  &mt LCTRL L  &mt LSHFT SEMI  &kp SQT
-&none        &kp SLASH    &kp Z        &kp X       &kp C       &kp V  &kp LG(SPACE)                &kp B  &kp N       &kp M       &kp COMMA    &kp DOT         &kp MINUS
-&none        &none        &none        &none                   &mo 1  &kp SPACE      &kp SPACE     &mo 2              &kp RALT    &kp LEFT     &kp RIGHT       &kp LGUI
+&none  &kp Q        &kp W        &kp E       &kp R       &kp T      &kp UP     &kp C_VOL_UP  &kp Y  &kp U       &kp I       &kp O        &kp P           &backdel
+&none  &mt LSHFT A  &mt LCTRL S  &mt LALT D  &mt LWIN F  &mt ESC G  &kp DOWN   &kp C_VOL_DN  &kp H  &mt LWIN J  &mt LALT K  &mt LCTRL L  &mt LSHFT SEMI  &kp SQT
+&none  &kp SLASH    &kp Z        &kp X       &kp C       &kp V      &kp GRAVE                &kp B  &kp N       &kp M       &kp COMMA    &kp DOT         &kp MINUS
+&none  &none        &none        &none                   &mo 1      &kp SPACE  &kp SPACE     &mo 2              &kp RALT    &kp LEFT     &kp RIGHT       &kp LGUI
             >;
         };
 
