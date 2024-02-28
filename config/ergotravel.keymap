@@ -21,17 +21,6 @@
 };
 
 / {
-    behaviors {
-        backdel: backdel {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BACKDEL";
-            bindings = <&kt BSPC>, <&kt DEL>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_RALT)>;
-        };
-    };
-
     combos {
         compatible = "zmk,combos";
 
@@ -76,7 +65,7 @@
         right_layer {
             bindings = <
 &trans  &none      &none      &none      &none      &none      &kp DEL    &kt BACKSPACE  &kp PG_UP      &none     &kp UP    &none      &kp LBKT   &kp RBKT
-&trans  &kp LSHFT  &kp LCTRL  &kp LALT   &kp LWIN   &kp ESC    &kp INS    &none          &kp PG_DN      &kp LEFT  &kp DOWN  &kp RIGHT  &kp COLON  &kp EQUAL
+&trans  &kp LCTRL  &kp LALT   &kp LWIN   &kp LSHFT  &kp ESC    &kp INS    &none          &kp PG_DN      &kp LEFT  &kp DOWN  &kp RIGHT  &kp COLON  &kp EQUAL
 &trans  &none      &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(A)                 &kp LG(SPACE)  &kp HOME  &none     &kp END    &none      &kp MINUS
 &none   &none      &kp LWIN   &trans                &trans     &kp ENTER  &kp ENTER      &trans                   &none     &none      &none      &kp BACKSLASH
             >;
