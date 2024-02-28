@@ -45,6 +45,11 @@
             bindings = <&kp C_MUTE>;
             key-positions = <21 7>;
         };
+
+        combo-tab-2 {
+            bindings = <&kp TAB>;
+            key-positions = <46 34>;
+        };
     };
 
     keymap {
